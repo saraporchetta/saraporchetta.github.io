@@ -1,449 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Sara Porchetta</title>
 
-  <title>Contact | Sara Porchetta</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Inter',Helvetica,Arial,sans-serif;color:#243844;background:#fff;line-height:1.75;-webkit-font-smoothing:antialiased}
 
-  <style>
+/* HEADER */
+.site-header{height:86px;padding:0 38px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:#fff;border-bottom:1px solid #e8eef1;position:relative;z-index:10}
+.header-space{grid-column:1}
+.nav{grid-column:2;display:flex;justify-content:center;align-items:center;gap:42px;font-size:14px;letter-spacing:1.2px;text-transform:uppercase}
+.nav a{position:relative;color:#12324a;text-decoration:none;font-weight:500;opacity:.88;transition:.2s}
+.nav a:hover{opacity:.55;transform:translateY(-2px)}
+.nav a.active{color:#12627a;opacity:1}
+.nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-11px;height:1px;background:#12627a}
 
-    * {
-      box-sizing: border-box;
-    }
+.header-logo-link{grid-column:3;justify-self:end;display:flex;align-items:center;text-decoration:none}
+.header-logo{width:58px;height:58px;object-fit:cover;border-radius:50%;opacity:.72;transition:.2s}
+.header-logo-link:hover .header-logo{opacity:1;transform:scale(1.03)}
 
-    body {
-      margin: 0;
-      font-family: 'Inter', Helvetica, Arial, sans-serif;
-      color: #243844;
-      background: #ffffff;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
+/* BANNER */
+.page-banner{position:relative;width:100%;height:260px;overflow:hidden;background:#12324a}
+.page-banner img{width:100%;height:100%;object-fit:cover;object-position:center 70%}
+.banner-overlay{position:absolute;inset:0;background:rgba(7,35,54,.25)}
+.banner-content{position:absolute;inset:0;display:flex;justify-content:center;align-items:center}
+.banner-title{color:#fff;font-size:44px;font-weight:300}
 
-    /* HEADER */
+/* PAGE */
+.container{max-width:860px;margin:0 auto;padding:56px 24px 80px}
+.contact-card{display:grid;grid-template-columns:190px 1fr;gap:40px}
+.profile-image{width:190px;height:190px;object-fit:cover;border-radius:10px;border:1px solid #e8eef1}
+.contact-info h2{margin:0 0 8px;font-size:28px;color:#12324a}
+.role{margin-bottom:20px;color:#12627a;font-size:12px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase}
+.contact-details{margin:0;font-size:16px;line-height:1.8}
+.contact-message{margin-top:36px;padding-top:28px;border-top:1px solid #e8eef1}
+.contact-message h3{margin:0 0 14px;font-size:22px;font-weight:400;color:#12324a}
+.contact-message p{margin:0 0 18px;text-align:justify}
 
-    .site-header {
-      height: 86px;
-      padding: 0 38px;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      background: #ffffff;
-      border-bottom: 1px solid #e8eef1;
-      position: relative;
-      z-index: 10;
-    }
-
-    .header-space {
-      grid-column: 1;
-    }
-
-    .nav {
-      grid-column: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 42px;
-      font-size: 14px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
-
-    .nav a {
-      position: relative;
-      color: #12324a;
-      text-decoration: none;
-      font-weight: 500;
-      opacity: 0.88;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    .nav a:hover {
-      opacity: 0.55;
-      transform: translateY(-2px);
-    }
-
-    .nav a.active {
-      color: #12627a;
-      opacity: 1;
-    }
-
-    .nav a.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -11px;
-      height: 1px;
-      background: #12627a;
-    }
-
-    /* LOGO */
-
-    .header-logo-link {
-      grid-column: 3;
-      justify-self: end;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .header-logo {
-      width: 58px;
-      height: 58px;
-      object-fit: cover;
-      border-radius: 50%;
-      opacity: 0.72;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    .header-logo-link:hover .header-logo {
-      opacity: 1;
-      transform: scale(1.03);
-    }
-
-    /* LOGO */
-
-    .header-logo-link {
-      grid-column: 3;
-      justify-self: end;
-
-      display: flex;
-      align-items: center;
-
-      text-decoration: none;
-    }
-
-    .header-logo {
-      display: block;
-
-      width: 58px;
-      height: 58px;
-
-      object-fit: cover;
-      border-radius: 50%;
-
-      opacity: 0.72;
-
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .header-logo-link:hover .header-logo {
-      opacity: 1;
-      transform: scale(1.03);
-    }
-
-       /* PAGE BANNER */
-
-.page-banner {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-  background: #12324a;
+/* MOBILE */
+@media (max-width:860px){
+.site-header{height:auto;min-height:110px;padding:18px 20px;grid-template-columns:1fr auto;grid-template-rows:auto auto;row-gap:14px}
+.header-space{display:none}
+.nav{grid-column:1/-1;grid-row:2;justify-content:center;flex-wrap:wrap;gap:14px 22px;font-size:12px;letter-spacing:1px}
+.header-logo-link{grid-column:2;grid-row:1;justify-self:end}
+.header-logo{width:50px;height:50px}
+.nav a.active::after{bottom:-6px}
+.page-banner{height:210px}
+.page-banner img{object-position:center 68%}
+.banner-title{font-size:38px}
+.container{padding:46px 20px 80px}
+.contact-card{grid-template-columns:150px 1fr;gap:26px}
+.profile-image{width:150px;height:150px}
 }
-
-.page-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  /* Lower crop so the turbines remain visible */
-  object-position: center 70%;
+@media (max-width:620px){
+.contact-card{grid-template-columns:1fr;gap:22px}
+.profile-image{width:160px;height:160px}
+.contact-message p{text-align:left}
 }
-
-.banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 35, 54, 0.25);
+@media (max-width:480px){
+.site-header{padding:16px}
+.nav{gap:12px 17px}
+.header-logo{width:46px;height:46px}
+.page-banner{height:180px}
+.page-banner img{object-position:center 65%}
+.banner-title{font-size:32px}
+.container{padding:38px 16px 64px}
+.contact-info h2{font-size:24px}
+.contact-details,.contact-message p{font-size:15px}
 }
-
-.banner-content {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 24px;
-  text-align: center;
-}
-
-.banner-title {
-  margin: 0;
-  color: #ffffff;
-  font-size: 44px;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-}
-
-    /* PAGE */
-
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 56px 24px 80px;
-    }
-
-    .page-header {
-      margin-bottom: 40px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid #e8eef1;
-    }
-
-    
-
-    /* CONTACT */
-
-    .contact-card {
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .profile-image {
-      width: 190px;
-      height: 190px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid #e8eef1;
-    }
-
-    .contact-info h2 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      font-weight: 500;
-      color: #12324a;
-    }
-
-    .role {
-      margin-bottom: 20px;
-      color: #12627a;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-    }
-
-    .contact-details {
-      margin: 0;
-      font-size: 16px;
-      color: #2d414c;
-      line-height: 1.8;
-    }
-
-    .contact-details a {
-      color: inherit;
-      text-decoration: none;
-      transition: opacity .2s ease;
-    }
-
-    .contact-details a:hover {
-      opacity: .65;
-    }
-
-    .contact-message {
-      margin-top: 36px;
-      padding-top: 28px;
-      border-top: 1px solid #e8eef1;
-    }
-
-    .contact-message h3 {
-      margin: 0 0 14px;
-      font-size: 22px;
-      font-weight: 400;
-      color: #12324a;
-    }
-
-    .contact-message p {
-      margin: 0 0 18px;
-      font-size: 16px;
-      color: #2d414c;
-      line-height: 1.8;
-      text-align: justify;
-    }
-
-    .contact-message p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* MOBILE */
-
-    @media (max-width:860px){
-
-      .site-header{
-        height:auto;
-        min-height:110px;
-        padding:18px 20px;
-        grid-template-columns:1fr auto;
-        grid-template-rows:auto auto;
-        row-gap:14px;
-      }
-
-      .header-space{
-        display:none;
-      }
-
-      .nav{
-        grid-column:1/-1;
-        grid-row:2;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:14px 22px;
-        font-size:12px;
-      }
-
-      .header-logo-link{
-        grid-column:2;
-        grid-row:1;
-      }
-
-      .header-logo{
-        width:50px;
-        height:50px;
-      }
-
-      .container{
-        padding:44px 20px 70px;
-      }
-
-      h1{
-        font-size:32px;
-      }
-
-      .contact-card{
-        grid-template-columns:150px 1fr;
-        gap:26px;
-      }
-
-      .profile-image{
-        width:150px;
-        height:150px;
-      }
-
-    }
-
-    @media (max-width:620px){
-
-      .contact-card{
-        grid-template-columns:1fr;
-      }
-
-      .profile-image{
-        width:160px;
-        height:160px;
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
-
 <body>
 
 <header class="site-header">
-
-  <div class="header-space"></div>
-
-  <nav class="nav">
-    <a href="research.html">Research</a>
-    <a href="group.html">Group</a>
-    <a href="publications.html">Publications</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-
-  <a href="index.html" class="header-logo-link">
-    <img src="x_maui3.png" alt="Sara Porchetta" class="header-logo">
-  </a>
-
+<div class="header-space"></div>
+<nav class="nav">
+<a href="research.html">Research</a>
+<a href="group.html">Group</a>
+<a href="publications.html">Publications</a>
+<a href="teaching.html">Teaching</a>
+<a href="contact.html" class="active">Contact</a>
+</nav>
+<a href="index.html" class="header-logo-link">
+<img src="x_maui3.png" alt="Sara Porchetta" class="header-logo">
+</a>
 </header>
 
 <section class="page-banner">
-
-    <img
-        src="windfarm.jpg"
-        alt="Offshore wind farm"
-    >
-
-    <div class="banner-overlay"></div>
-
-    <div class="banner-content">
-        <h1 class="banner-title">Contact</h1>
-    </div>
-
+<img src="windfarm.jpg" alt="Offshore wind farm">
+<div class="banner-overlay"></div>
+<div class="banner-content"><h1 class="banner-title">Contact</h1></div>
 </section>
 
 <main class="container">
+<section class="contact-card">
 
-  
+<img src="sara_picture.jpg" alt="Sara Porchetta" class="profile-image">
 
-  <section class="contact-card">
+<div class="contact-info">
+<h2>Sara Porchetta</h2>
 
-    <img
-      src="sara_picture.jpg"
-      alt="Sara Porchetta"
-      class="profile-image"
-    >
+<div class="role">Assistant Professor</div>
 
-    <div class="contact-info">
+<p class="contact-details">
+Department of Geoscience and Remote Sensing<br>
+Delft University of Technology (TU Delft)
+</p>
 
-      <h2>Sara Porchetta</h2>
+<p class="contact-details" style="margin-top:18px;">
+Email: s.p.porchetta [at] tudelft.nl
+</p>
 
-      <div class="role">
-        Assistant Professor
-      </div>
+<div class="contact-message">
+<h3>Get in touch</h3>
 
-      <p class="contact-details">
-        Department of Geoscience and Remote Sensing<br>
-        Delft University of Technology (TU Delft)
-      </p>
+<p>
+I welcome opportunities to collaborate with researchers from academia, industry, and governmental organizations who share an interest in offshore wind energy within the atmosphere–ocean system.
+</p>
 
-      <p class="contact-details" style="margin-top:18px;">
-        <a href="mailto:s.p.porchetta@tudelft.nl">
-          s.p.porchetta@tudelft.nl
-        </a>
-      </p>
+<p>
+I am also happy to hear from prospective BSc and MSc students interested in thesis projects, as well as prospective PhD candidates and postdoctoral researchers interested in joining the group. If you think our research interests align, please feel free to get in touch.
+</p>
 
-      <div class="contact-message">
-
-        <h3>Get in touch</h3>
-
-        <p>
-          I welcome opportunities to collaborate with researchers from academia, industry, and governmental
-          organizations who share an interest in offshore wind energy within the atmosphere-ocean system.
-        </p>
-
-        <p>
-          I am also happy to hear from prospective BSc and
-          MSc students interested in thesis projects, as well as
-          prospective PhD candidates and
-          postdoctoral researchers interested in joining the group.
-          If you think our research interests align, please feel free to get in touch.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
+</div>
+</div>
+</section>
 </main>
 
 </body>
-
 </html>
