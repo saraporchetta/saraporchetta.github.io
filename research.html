@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Research | Sara Porchetta</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', Helvetica, Arial, sans-serif;
+      color: #243844;
+      background: #ffffff;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      height: 86px;
+      padding: 0 38px;
+
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+
+      background: #ffffff;
+      border-bottom: 1px solid #e8eef1;
+
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-space {
+      grid-column: 1;
+    }
+
+    /* NAVIGATION */
+
+    .nav {
+      grid-column: 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 42px;
+
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      position: relative;
+
+      color: #12324a;
+      text-decoration: none;
+      font-weight: 500;
+      opacity: 0.88;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .nav a:hover {
+      opacity: 0.55;
+      transform: translateY(-2px);
+    }
+
+    .nav a.active {
+      color: #12627a;
+      opacity: 1;
+    }
+
+    .nav a.active::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -11px;
+
+      height: 1px;
+      background: #12627a;
+    }
+
+    /* LOGO */
+
+    .header-logo-link {
+      grid-column: 3;
+      justify-self: end;
+
+      display: flex;
+      align-items: center;
+
+      text-decoration: none;
+    }
+
+    .header-logo {
+      display: block;
+
+      width: 58px;
+      height: 58px;
+
+      object-fit: cover;
+      border-radius: 50%;
+
+      opacity: 0.72;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .header-logo-link:hover .header-logo {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    /* PAGE BANNER */
+
+.page-banner {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: #12324a;
+}
+
+.page-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Lower crop so the turbines remain visible */
+  object-position: center 70%;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 35, 54, 0.25);
+}
+
+.banner-content {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  text-align: center;
+}
+
+.banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+    /* MAIN PAGE */
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 58px 24px 100px;
+    }
+
+    .intro {
+      margin: 0 0 46px;
+      padding-bottom: 38px;
+
+      color: #2d414c;
+
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+
+      border-bottom: 1px solid #e8eef1;
+    }
+
+    .research-text {
+      max-width: 840px;
+    }
+
+    p {
+      margin: 0 0 24px;
+
+      color: #2d414c;
+
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    h2 {
+      margin: 58px 0 22px;
+
+      color: #0b3151;
+
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.35;
+    }
+
+    /* PROJECT CARDS */
+
+    .project-card {
+      margin-top: 18px;
+      padding: 32px 34px;
+
+      background: #f7fafb;
+      border: 1px solid #dfe9ed;
+      border-radius: 12px;
+    }
+
+    .project-label {
+      display: inline-block;
+      margin-bottom: 13px;
+
+      color: #12627a;
+
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      margin-bottom: 20px;
+
+      color: #12324a;
+
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .project-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* PROJECT LINKS */
+
+    .project-link {
+      margin-top: 18px;
+    }
+
+    .project-link a {
+      color: #12627a;
+      text-decoration: none;
+      font-weight: 500;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .project-link a:hover {
+      opacity: 0.65;
+    }
+
+    .project-link a:focus-visible {
+      outline: 2px solid #12627a;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 860px) {
+
+      .site-header {
+        height: auto;
+        min-height: 110px;
+
+        padding: 18px 20px;
+
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        row-gap: 14px;
+      }
+
+      .header-space {
+        display: none;
+      }
+
+      .nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      .header-logo-link {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+      }
+
+      .header-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .nav a.active::after {
+        bottom: -6px;
+      }
+
+      .page-banner {
+        height: 180px;
+      }
+
+      .banner-title {
+        font-size: 38px;
+      }
+
+      .container {
+        padding: 46px 20px 80px;
+      }
+
+      .intro {
+        margin-bottom: 38px;
+        padding-bottom: 32px;
+      }
+
+      h2 {
+        margin-top: 48px;
+        font-size: 24px;
+      }
+
+      p,
+      .intro {
+        font-size: 17px;
+      }
+
+      .project-card {
+        padding: 24px 22px;
+      }
+
+      .project-title {
+        font-size: 19px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .site-header {
+        padding: 16px;
+      }
+
+      .nav {
+        gap: 12px 17px;
+      }
+
+      .header-logo {
+        width: 46px;
+        height: 46px;
+      }
+
+      .page-banner {
+        height: 150px;
+      }
+
+      .banner-title {
+        font-size: 32px;
+      }
+
+      .container {
+        padding-top: 38px;
+      }
+
+      .intro,
+      p {
+        text-align: left;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="header-space" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="research.html" class="active">Research</a>
+      <a href="group.html">Group</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a
+      href="index.html"
+      class="header-logo-link"
+      aria-label="Go to homepage"
+    >
+      <img
+        src="x_maui3.png"
+        alt="Sara Porchetta homepage"
+        class="header-logo"
+      >
+    </a>
+
+  </header>
+
+  <section class="page-banner" aria-labelledby="page-title">
+
+    <img
+      src="windfarm.jpg"
+      alt="Offshore wind farm at sea"
+    >
+
+    <div class="banner-overlay" aria-hidden="true"></div>
+
+    <div class="banner-content">
+      <h1 class="banner-title" id="page-title">Research</h1>
+    </div>
+
+  </section>
+
+  <main class="container">
+
+    <p class="intro">
+  Our group studies the two-way interactions between the offshore
+  environment and offshore wind energy. We investigate how atmospheric
+  and oceanic conditions—including boundary-layer dynamics, waves, and
+  air–sea interaction—affect wind farm performance, and how offshore wind
+  farms, in turn, modify the surrounding atmosphere, ocean, waves, and
+  marine environment across spatial and temporal scales.
+</p>
+
+<section class="research-text">
+
+  <p>
+    We combine observations, high-resolution numerical modelling,
+    mesoscale simulations, and theoretical analysis to study these coupled
+    processes from individual wind farms to the regional North Sea. By
+    improving their representation in weather, climate, and wind-energy
+    models, we aim to reduce uncertainty, strengthen fundamental process
+    understanding, and support the sustainable development of offshore
+    renewable energy.
+  </p>
+
+</section>
+
+    <section>
+
+      <h2>Research projects</h2>
+
+      <article class="project-card">
+
+        <div class="project-label">
+          NWO Veni Project
+        </div>
+
+        <div class="project-title">
+          PRECIOS: PREcipitation Changes Induced by North Sea Offshore Wind Farms
+        </div>
+
+        <p>
+          The rapid expansion of offshore wind farms introduces new
+          interactions between wind turbines and the atmosphere. While
+          offshore wind farms are known to modify atmospheric flow and
+          turbulence, their potential influence on cloud and precipitation
+          processes remains insufficiently understood.
+        </p>
+
+        <p>
+          PRECIOS combines observations, high-resolution atmospheric
+          simulations, and future offshore wind development scenarios to
+          investigate how wind farms may influence precipitation in the North
+          Sea region. The project examines the links between turbine-induced
+          flow changes, cloud formation, rainfall, and their representation in
+          weather and climate models.
+        </p>
+
+        <p>
+          By improving understanding of these processes, PRECIOS aims to
+          support more reliable atmospheric modelling and provide useful
+          knowledge for the scientific community, meteorological institutes,
+          policymakers, and the offshore wind sector.
+        </p>
+
+      </article>
+
+      <article class="project-card">
+
+        <div class="project-label">
+          NWO – Dutch Research Agenda (NWA)
+        </div>
+
+        <div class="project-title">
+          North Sea POWER: Understanding the ecological impacts of offshore
+          wind farms
+        </div>
+
+        <p>
+          North Sea POWER is a multidisciplinary research programme
+          investigating how offshore wind farms influence ecological processes
+          in the North Sea. The project examines interactions between physical
+          changes induced by wind farms and the responses of marine and aerial
+          ecosystems, integrating expertise from atmospheric science,
+          oceanography, ecology, and environmental modelling.
+        </p>
+
+        <p>
+          Our contribution focuses on understanding the atmospheric and
+          physical processes that drive ecological change and on improving the
+          representation of these coupled interactions across the atmosphere,
+          ocean, and marine environment. The project aims to provide the
+          scientific basis for balancing offshore renewable energy development
+          with ecosystem protection and sustainable marine management.
+        </p>
+
+        <p class="project-link">
+          <a
+            href="https://www.nwo.nl/en/news/consortium-receives-nwa-funding-for-research-into-the-ecological-impacts-of-offshore-wind-farms"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Project announcement →
+          </a>
+        </p>
+
+      </article>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

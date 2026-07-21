@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Teaching | Sara Porchetta</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', Helvetica, Arial, sans-serif;
+      color: #243844;
+      background: #ffffff;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      height: 86px;
+      padding: 0 38px;
+
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+
+      background: #ffffff;
+      border-bottom: 1px solid #e8eef1;
+
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-space {
+      grid-column: 1;
+    }
+
+    /* NAVIGATION */
+
+    .nav {
+      grid-column: 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 42px;
+
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      position: relative;
+
+      color: #12324a;
+      text-decoration: none;
+      font-weight: 500;
+      opacity: 0.88;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .nav a:hover {
+      opacity: 0.55;
+      transform: translateY(-2px);
+    }
+
+    .nav a.active {
+      color: #12627a;
+      opacity: 1;
+    }
+
+    .nav a.active::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -11px;
+
+      height: 1px;
+      background: #12627a;
+    }
+
+    /* LOGO */
+
+    .header-logo-link {
+      grid-column: 3;
+      justify-self: end;
+
+      display: flex;
+      align-items: center;
+
+      text-decoration: none;
+    }
+
+    .header-logo {
+      width: 58px;
+      height: 58px;
+
+      object-fit: cover;
+      border-radius: 50%;
+
+      opacity: 0.72;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .header-logo-link:hover .header-logo {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+/* PAGE BANNER */
+
+.page-banner {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: #12324a;
+}
+
+.page-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 35, 54, 0.25);
+}
+
+.banner-content {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  text-align: center;
+}
+
+.banner-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
+    /* PAGE */
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .page-header {
+      margin-bottom: 36px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #e8eef1;
+    }
+
+    h1 {
+      margin: 0;
+      color: #0b3151;
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .intro {
+      margin-bottom: 46px;
+
+      color: #2d414c;
+      font-size: 17px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .course {
+      margin-bottom: 42px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e8eef1;
+    }
+
+    .course:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .course h2 {
+      margin: 0 0 14px;
+
+      color: #12324a;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .course p {
+      margin: 0;
+
+      color: #2d414c;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 860px) {
+
+      .site-header {
+        height: auto;
+        min-height: 110px;
+
+        padding: 18px 20px;
+
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        row-gap: 14px;
+      }
+
+      .header-space {
+        display: none;
+      }
+
+      .nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      .header-logo-link {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .header-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .nav a.active::after {
+        bottom: -6px;
+      }
+
+      .container {
+        padding: 44px 20px 70px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .course h2 {
+        font-size: 22px;
+      }
+
+      .intro,
+      .course p {
+        font-size: 15px;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .site-header {
+        padding: 16px;
+      }
+
+      .nav {
+        gap: 12px 17px;
+      }
+
+      .header-logo {
+        width: 46px;
+        height: 46px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="header-space" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="research.html">Research</a>
+      <a href="group.html">Group</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html" class="active">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a
+      href="index.html"
+      class="header-logo-link"
+      aria-label="Go to homepage"
+    >
+      <img
+        src="x_maui3.png"
+        alt="Sara Porchetta homepage"
+        class="header-logo"
+      >
+    </a>
+
+  </header>
+
+<section class="page-banner">
+
+    <img
+        src="windfarm.jpg"
+        alt="Offshore wind farm"
+    >
+
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content">
+        <h1 class="banner-title">Teaching</h1>
+    </div>
+
+</section>
+
+<main class="container">
+
+    
+
+    <p class="intro">
+      I contribute to teaching within the Department of Geoscience and Remote
+      Sensing at TU Delft. 
+    </p>
+
+    <section class="course">
+
+      <h2>ECTM3040 – Atmospheric Physics for Renewable Energy</h2>
+
+      <p>
+        This course explores the atmospheric processes that shape wind and solar
+        energy resources. Students gain an understanding of atmospheric
+        boundary-layer dynamics, turbulence, surface–atmosphere exchange, and
+        radiative transfer, and how these processes influence renewable energy
+        generation. Through the analysis of atmospheric observations and
+        numerical weather model simulations, students develop practical skills
+        in assessing atmospheric conditions relevant to wind and solar energy
+        systems.
+      </p>
+
+    </section>
+
+    <section class="course">
+
+      <h2>ECTB2240 – Modeling and Simulation</h2>
+
+      <p>
+        This course introduces the mathematical and numerical methods used to
+        model Earth system processes, including groundwater flow, ocean
+        circulation, atmospheric dynamics, and wave propagation. Students learn
+        how governing equations are formulated, discretized in space and time,
+        and implemented in numerical simulations. The course covers numerical
+        integration, interpolation, discretization techniques for partial
+        differential equations, optimization, and high-performance computing,
+        providing the foundations for scientific modelling across the
+        geosciences.
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

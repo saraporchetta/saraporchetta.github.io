@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sara Porchetta</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', Helvetica, Arial, sans-serif;
+      color: #12324a;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      height: 86px;
+      padding: 0 38px;
+
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+
+      background: #ffffff;
+      border-bottom: 1px solid #e8eef1;
+
+      position: relative;
+      z-index: 10;
+    }
+
+    .header-space {
+      grid-column: 1;
+    }
+
+    /* NAVIGATION */
+
+    .nav {
+      grid-column: 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 42px;
+
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav a {
+      position: relative;
+
+      color: #12324a;
+      text-decoration: none;
+      font-weight: 500;
+      opacity: 0.88;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .nav a:hover {
+      opacity: 0.55;
+      transform: translateY(-2px);
+    }
+
+    /* LOGO */
+
+    .header-logo-link {
+      grid-column: 3;
+      justify-self: end;
+
+      display: flex;
+      align-items: center;
+
+      text-decoration: none;
+    }
+
+    .header-logo {
+      display: block;
+
+      width: 58px;
+      height: 58px;
+
+      object-fit: cover;
+      border-radius: 50%;
+
+      opacity: 0.72;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .header-logo-link:hover .header-logo {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: calc(100vh - 86px);
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(210, 242, 247, 0.34),
+          rgba(255, 255, 255, 0.08)
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.03),
+          rgba(38, 157, 180, 0.12)
+        ),
+        url("windfarm.jpg") center / cover no-repeat;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.12)
+      );
+    }
+
+    /* CENTRAL CONTENT */
+
+    .content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 900px;
+      padding: 0 24px;
+
+      transform: translateY(-80px);
+    }
+
+    h1 {
+      margin: 0;
+
+      color: #0b3151;
+
+      font-size: 66px;
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: 1px;
+
+      text-shadow: 0 2px 14px rgba(255, 255, 255, 0.75);
+    }
+
+    .subtitle {
+      margin-top: 14px;
+
+      color: #12627a;
+
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 3px;
+    }
+
+    .info {
+      margin-top: 18px;
+
+      color: #214b5f;
+
+      font-size: 16px;
+      line-height: 1.7;
+      letter-spacing: 0.8px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 860px) {
+
+      .site-header {
+        height: auto;
+        min-height: 110px;
+
+        padding: 18px 20px;
+
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        row-gap: 14px;
+      }
+
+      .header-space {
+        display: none;
+      }
+
+      .nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      .header-logo-link {
+        grid-column: 2;
+        grid-row: 1;
+
+        justify-self: end;
+      }
+
+      .header-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .hero {
+        min-height: calc(100vh - 110px);
+        background-position: center;
+      }
+
+      .content {
+        transform: translateY(-45px);
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+      }
+
+      .info {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .site-header {
+        padding: 16px;
+      }
+
+      .nav {
+        gap: 12px 17px;
+      }
+
+      .header-logo {
+        width: 46px;
+        height: 46px;
+      }
+
+      .content {
+        transform: translateY(-25px);
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="header-space" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="research.html">Research</a>
+      <a href="group.html">Group</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a
+      href="index.html"
+      class="header-logo-link"
+      aria-label="Go to homepage"
+    >
+      <img
+        src="x_maui3.png"
+        alt="Sara Porchetta homepage"
+        class="header-logo"
+      >
+    </a>
+
+  </header>
+
+  <main class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="content">
+
+      <h1>Sara Porchetta</h1>
+
+      <div class="subtitle">
+        TU Delft
+      </div>
+
+      <div class="info">
+        Assistant Professor<br>
+        Department of Geoscience &amp; Remote Sensing
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
