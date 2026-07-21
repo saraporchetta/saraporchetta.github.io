@@ -13,18 +13,15 @@
   >
 
   <style>
-
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-
       font-family: 'Inter', Helvetica, Arial, sans-serif;
       color: #243844;
       background: #ffffff;
-
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
@@ -34,14 +31,11 @@
     .site-header {
       height: 86px;
       padding: 0 38px;
-
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-
       background: #ffffff;
       border-bottom: 1px solid #e8eef1;
-
       position: relative;
       z-index: 10;
     }
@@ -54,12 +48,10 @@
 
     .nav {
       grid-column: 2;
-
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 42px;
-
       font-size: 14px;
       letter-spacing: 1.2px;
       text-transform: uppercase;
@@ -67,15 +59,11 @@
 
     .nav a {
       position: relative;
-
       color: #12324a;
       text-decoration: none;
       font-weight: 500;
       opacity: 0.88;
-
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     .nav a:hover {
@@ -90,12 +78,10 @@
 
     .nav a.active::after {
       content: "";
-
       position: absolute;
       left: 0;
       right: 0;
       bottom: -11px;
-
       height: 1px;
       background: #12627a;
     }
@@ -105,210 +91,268 @@
     .header-logo-link {
       grid-column: 3;
       justify-self: end;
-
       display: flex;
       align-items: center;
-
       text-decoration: none;
     }
 
     .header-logo {
       display: block;
-
       width: 58px;
       height: 58px;
-
       object-fit: cover;
       border-radius: 50%;
-
       opacity: 0.72;
-
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     .header-logo-link:hover .header-logo {
       opacity: 1;
       transform: scale(1.03);
     }
-/* PAGE BANNER */
 
-.page-banner {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-  background: #12324a;
-}
+    /* PAGE BANNER */
 
-.page-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 70%;
-}
-
-.banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 35, 54, 0.25);
-}
-
-.banner-content {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 24px;
-  text-align: center;
-}
-
-.banner-title {
-  margin: 0;
-  color: #ffffff;
-  font-size: 44px;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 12px rgba(0,0,0,.35);
-}
-    /* PAGE */
-
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 72px 24px 100px;
+    .page-banner {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background: #12324a;
     }
 
-   .container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 56px 24px 80px;
-}
+    .page-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 70%;
+    }
 
-.page-header {
-  margin-bottom: 36px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid #e8eef1;
-}
+    .banner-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 35, 54, 0.25);
+    }
 
-h1 {
-  margin: 0 0 12px;
-  color: #0b3151;
-  font-size: 38px;
-  font-weight: 300;
-  line-height: 1.2;
-}
+    .banner-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
 
-.scholar-link {
-  margin: 0;
-  color: #526b79;
-  font-size: 15px;
-  line-height: 1.6;
-}
+    .banner-title {
+      margin: 0;
+      color: #ffffff;
+      font-size: 44px;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    }
 
-.publication-year {
-  margin: 38px 0 8px;
-  color: #0b3151;
-  font-size: 21px;
-  font-weight: 400;
-}
+    /* MAIN PAGE */
 
-.publication {
-  padding: 18px 0 20px;
-  border-bottom: 1px solid #e8eef1;
-}
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 52px 24px 80px;
+    }
 
-.publication-title a {
-    color: inherit;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
+    .scholar-link {
+      margin: 0 0 34px;
+      color: #526b79;
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
-.publication-title a:hover {
-    opacity: 0.65;
-}
+    .scholar-link a {
+      color: #12627a;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
 
-.publication-authors {
-  margin: 0 0 3px;
-  color: #2d414c;
-  font-size: 14px;
-  line-height: 1.6;
-}
+    .scholar-link a:hover {
+      opacity: 0.65;
+    }
 
-.publication-journal {
-  margin: 0;
-  color: #617580;
-  font-size: 14px;
-  line-height: 1.6;
-}
+    .publication-year {
+      margin: 38px 0 8px;
+      color: #0b3151;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    .publication-year:first-of-type {
+      margin-top: 0;
+    }
+
+    .publication {
+      padding: 18px 0 20px;
+      border-bottom: 1px solid #e8eef1;
+    }
+
+    .publication-title {
+      margin: 0 0 6px;
+      color: #12324a;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .publication-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .publication-title a:hover {
+      opacity: 0.65;
+    }
+
+    .publication-title a:focus-visible,
+    .scholar-link a:focus-visible {
+      outline: 2px solid #12627a;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .publication-authors {
+      margin: 0 0 3px;
+      color: #2d414c;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .publication-journal {
+      margin: 0;
+      color: #617580;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
     /* MOBILE */
 
-  .container {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 56px 24px 80px;
-}
+    @media (max-width: 860px) {
+      .site-header {
+        height: auto;
+        min-height: 110px;
+        padding: 18px 20px;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        row-gap: 14px;
+      }
 
-.page-header {
-  margin-bottom: 36px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid #e8eef1;
-}
+      .header-space {
+        display: none;
+      }
 
-h1 {
-  margin: 0 0 12px;
-  color: #0b3151;
-  font-size: 38px;
-  font-weight: 300;
-  line-height: 1.2;
-}
+      .nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
 
-.scholar-link {
-  margin: 0;
-  color: #526b79;
-  font-size: 15px;
-  line-height: 1.6;
-}
+      .header-logo-link {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+      }
 
-.publication-year {
-  margin: 38px 0 8px;
-  color: #0b3151;
-  font-size: 21px;
-  font-weight: 400;
-}
+      .header-logo {
+        width: 50px;
+        height: 50px;
+      }
 
-.publication {
-  padding: 18px 0 20px;
-  border-bottom: 1px solid #e8eef1;
-}
+      .nav a.active::after {
+        bottom: -6px;
+      }
 
-.publication-title {
-  margin: 0 0 6px;
-  color: #12324a;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 1.45;
-}
+      .page-banner {
+        height: 210px;
+      }
 
-.publication-authors {
-  margin: 0 0 3px;
-  color: #2d414c;
-  font-size: 14px;
-  line-height: 1.6;
-}
+      .page-banner img {
+        object-position: center 68%;
+      }
 
-.publication-journal {
-  margin: 0;
-  color: #617580;
-  font-size: 14px;
-  line-height: 1.6;
-}
+      .banner-title {
+        font-size: 38px;
+      }
 
+      .container {
+        padding: 46px 20px 72px;
+      }
+
+      .publication-title {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-header {
+        padding: 16px;
+      }
+
+      .nav {
+        gap: 12px 17px;
+      }
+
+      .header-logo {
+        width: 46px;
+        height: 46px;
+      }
+
+      .page-banner {
+        height: 180px;
+      }
+
+      .page-banner img {
+        object-position: center 65%;
+      }
+
+      .banner-title {
+        font-size: 32px;
+      }
+
+      .container {
+        padding: 38px 16px 64px;
+      }
+
+      .scholar-link {
+        margin-bottom: 28px;
+        font-size: 14px;
+      }
+
+      .publication-year {
+        margin-top: 32px;
+        font-size: 19px;
+      }
+
+      .publication {
+        padding: 16px 0 18px;
+      }
+
+      .publication-title {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .publication-authors,
+      .publication-journal {
+        font-size: 13px;
+        line-height: 1.65;
+      }
+    }
   </style>
 </head>
 
@@ -338,50 +382,41 @@ h1 {
       >
     </a>
 
- </header>
+  </header>
 
-<section class="page-banner">
+  <section class="page-banner" aria-labelledby="page-title">
 
     <img
-        src="windfarm.jpg"
-        alt="Offshore wind farm"
+      src="windfarm.jpg"
+      alt="Offshore wind farm"
     >
 
-    <div class="banner-overlay"></div>
+    <div class="banner-overlay" aria-hidden="true"></div>
 
     <div class="banner-content">
-        <h1 class="banner-title">Publications</h1>
+      <h1 class="banner-title" id="page-title">Publications</h1>
     </div>
 
-</section>
+  </section>
 
-<main class="container">
+  <main class="container">
 
-    <header class="page-header">
-
-      
-
-      <p class="scholar-link">
-        Full publication list on
-        <a
-          href="https://scholar.google.com/citations?hl=nl&user=U1hwWMMAAAAJ&view_op=list_works&sortby=pubdate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google Scholar →
-        </a>
-      </p>
-
-    </header>
+    <p class="scholar-link">
+      Full publication list on
+      <a
+        href="https://scholar.google.com/citations?hl=nl&user=U1hwWMMAAAAJ&view_op=list_works&sortby=pubdate"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Scholar →
+      </a>
+    </p>
 
     <section aria-label="Publication list">
-
-      <!-- 2025 -->
 
       <h2 class="publication-year">2025</h2>
 
       <article class="publication">
-
         <h3 class="publication-title">
           <a
             href="https://doi.org/10.1088/1742-6596/3131/1/012005"
@@ -403,11 +438,9 @@ h1 {
           <em>Journal of Physics: Conference Series</em>,
           3131, 012005, 2025
         </p>
-
       </article>
 
       <article class="publication">
-
         <h3 class="publication-title">
           <a
             href="https://doi.org/10.5194/wes-10-245-2025"
@@ -429,15 +462,11 @@ h1 {
           <em>Wind Energy Science</em>,
           10, 245–268, 2025
         </p>
-
       </article>
-
-      <!-- 2024 -->
 
       <h2 class="publication-year">2024</h2>
 
       <article class="publication">
-
         <h3 class="publication-title">
           <a
             href="https://doi.org/10.5194/wes-2024-58"
@@ -459,11 +488,9 @@ h1 {
           <em>Wind Energy Science Discussions</em>,
           preprint, 2024
         </p>
-
       </article>
 
       <article class="publication">
-
         <h3 class="publication-title">
           <a
             href="https://doi.org/10.1088/1742-6596/2767/9/092078"
@@ -485,90 +512,82 @@ h1 {
           <em>Journal of Physics: Conference Series</em>,
           2767, 092078, 2024
         </p>
-
       </article>
 
       <article class="publication">
+        <h3 class="publication-title">
+          <a
+            href="https://doi.org/10.1088/1742-6596/2767/5/052032"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Integrating COAWST and OpenFAST for Wind Turbine Loading
+          </a>
+        </h3>
 
-  <h3 class="publication-title">
-    <a
-      href="https://doi.org/10.1088/1742-6596/2767/5/052032"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Integrating COAWST and OpenFAST for Wind Turbine Loading
-    </a>
-  </h3>
+        <p class="publication-authors">
+          A. Vemuri, <strong>S. Porchetta</strong>, W. Munters,
+          J. Gebel, A. Nejad, J. Helsen and J. Van Beeck
+        </p>
 
-  <p class="publication-authors">
-    A. Vemuri, <strong>S. Porchetta</strong>, W. Munters,
-    J. Gebel, A. Nejad, J. Helsen and J. Van Beeck
-  </p>
+        <p class="publication-journal">
+          <em>Journal of Physics: Conference Series</em>,
+          2767, 052032, 2024
+        </p>
+      </article>
 
-  <p class="publication-journal">
-    <em>Journal of Physics: Conference Series</em>,
-    2767, 052032, 2024
-  </p>
+      <article class="publication">
+        <h3 class="publication-title">
+          <a
+            href="https://doi.org/10.1088/1742-6596/2767/6/062009"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Investigating North Sea Precipitation Variability:
+            Implications for Offshore Wind Energy Siting and Condition Assessments
+          </a>
+        </h3>
 
-</article>
+        <p class="publication-authors">
+          T. Ivanova, <strong>S. Porchetta</strong>, S. Buckingham,
+          J. Helsen, J. Van Beeck and W. Munters
+        </p>
 
-<article class="publication">
+        <p class="publication-journal">
+          <em>Journal of Physics: Conference Series</em>,
+          2767, 062009, 2024
+        </p>
+      </article>
 
-  <h3 class="publication-title">
-    <a
-      href="https://doi.org/10.1088/1742-6596/2767/6/062009"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Investigating North Sea Precipitation Variability: Implications for Offshore Wind Energy Siting and Condition Assessments
-    </a>
-  </h3>
+      <h2 class="publication-year">2022</h2>
 
-  <p class="publication-authors">
-    T. Ivanova, <strong>S. Porchetta</strong>, S. Buckingham,
-    J. Helsen, J. Van Beeck and W. Munters
-  </p>
+      <article class="publication">
+        <h3 class="publication-title">
+          <a
+            href="https://doi.org/10.1016/j.expthermflusci.2021.110578"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Experimental Investigation of the Airflow Structure above
+            Mechanically Generated Regular Waves for Both Aligned and Opposed
+            Wind–Wave Directions
+          </a>
+        </h3>
 
-  <p class="publication-journal">
-    <em>Journal of Physics: Conference Series</em>,
-    2767, 062009, 2024
-  </p>
+        <p class="publication-authors">
+          <strong>S. Porchetta</strong>, T. Carlesi,
+          M. R. Vetrano, J. Van Beeck and D. Laboureur
+        </p>
 
-</article>
-
-<h2 class="publication-year">2022</h2>
-
-<article class="publication">
-
-  <h3 class="publication-title">
-    <a
-      href="https://doi.org/10.1016/j.expthermflusci.2021.110578"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Experimental Investigation of the Airflow Structure above Mechanically Generated Regular Waves for Both Aligned and Opposed Wind–Wave Directions
-    </a>
-  </h3>
-
-  <p class="publication-authors">
-    <strong>S. Porchetta</strong>, T. Carlesi,
-    M. R. Vetrano, J. Van Beeck and
-    D. Laboureur
-  </p>
-
-  <p class="publication-journal">
-    <em>Experimental Thermal and Fluid Science</em>,
-    133, 110578, 2022
-  </p>
-
-</article>
-
-      <!-- 2021 -->
+        <p class="publication-journal">
+          <em>Experimental Thermal and Fluid Science</em>,
+          133, 110578, 2022
+        </p>
+      </article>
 
       <h2 class="publication-year">2021</h2>
 
       <article class="publication">
-
         <h3 class="publication-title">
           <a
             href="https://www.sciencedirect.com/science/article/abs/pii/S0960148121012799"
@@ -588,11 +607,9 @@ h1 {
         <p class="publication-journal">
           <em>Renewable Energy</em>, 2021
         </p>
-
       </article>
 
       <article class="publication">
-
         <h3 class="publication-title">
           <a
             href="https://doi.org/10.1098/rsif.2021.0236"
@@ -614,35 +631,33 @@ h1 {
           <em>Journal of the Royal Society Interface</em>,
           18, 20210236, 2021
         </p>
-</article>
-     <article class="publication">
+      </article>
 
-  <h3 class="publication-title">
-    <a
-      href="https://doi.org/10.1016/j.atmosres.2020.105381"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Large Eddy Simulations of the Martian Convective Boundary Layer:
-      Towards Developing a New Planetary Boundary Layer Scheme
-    </a>
-  </h3>
+      <article class="publication">
+        <h3 class="publication-title">
+          <a
+            href="https://doi.org/10.1016/j.atmosres.2020.105381"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Large Eddy Simulations of the Martian Convective Boundary Layer:
+            Towards Developing a New Planetary Boundary Layer Scheme
+          </a>
+        </h3>
 
-  <p class="publication-authors">
-    O. Temel, C. B. Senel, <strong>S. Porchetta</strong>,
-    D. Muñoz-Esparza, M. A. Mischna,
-    T. Van Hoolst, J. Van Beeck and Ö. Karatekin
-  </p>
+        <p class="publication-authors">
+          O. Temel, C. B. Senel, <strong>S. Porchetta</strong>,
+          D. Muñoz-Esparza, M. A. Mischna,
+          T. Van Hoolst, J. Van Beeck and Ö. Karatekin
+        </p>
 
-  <p class="publication-journal">
-    <em>Atmospheric Research</em>,
-    <strong>250</strong>, 105381, 2021
-  </p>
+        <p class="publication-journal">
+          <em>Atmospheric Research</em>,
+          <strong>250</strong>, 105381, 2021
+        </p>
+      </article>
 
-</article>
-
- <article class="publication">
-
+      <article class="publication">
         <h3 class="publication-title">
           <a
             href="https://doi.org/10.1002/qj.3948"
@@ -664,43 +679,36 @@ h1 {
           <em>Quarterly Journal of the Royal Meteorological Society</em>,
           147, 825–846, 2021
         </p>
-
       </article>
-      <!-- 2020 -->
 
       <h2 class="publication-year">2020</h2>
 
-     <article class="publication">
+      <article class="publication">
+        <h3 class="publication-title">
+          <a
+            href="https://doi.org/10.1038/s41467-020-15894-6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Exposure to UV Radiance Predicts Repeated Evolution
+            of Concealed Black Skin in Birds
+          </a>
+        </h3>
 
-  <h3 class="publication-title">
-    <a
-      href="https://doi.org/10.1038/s41467-020-15894-6"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Exposure to UV Radiance Predicts Repeated Evolution of Concealed Black Skin in Birds
-    </a>
-  </h3>
+        <p class="publication-authors">
+          M. P. J. Nicolaï, M. D. Shawkey,
+          <strong>S. Porchetta</strong>, R. Claus and L. D'Alba
+        </p>
 
-  <p class="publication-authors">
-    M. P. J. Nicolaï, M. D. Shawkey,
-    <strong>S. Porchetta</strong>,
-    R. Claus and L. D'Alba
-  </p>
-
-  <p class="publication-journal">
-    <em>Nature Communications</em>,
-    <strong>11</strong>, 2414, 2020
-  </p>
-
-</article>
-
-      <!-- 2019 -->
+        <p class="publication-journal">
+          <em>Nature Communications</em>,
+          <strong>11</strong>, 2414, 2020
+        </p>
+      </article>
 
       <h2 class="publication-year">2019</h2>
 
       <article class="publication">
-
         <h3 class="publication-title">
           <a
             href="https://doi.org/10.5194/acp-19-6681-2019"
@@ -722,59 +730,55 @@ h1 {
           <em>Atmospheric Chemistry and Physics</em>,
           19, 6681–6700, 2019
         </p>
-
       </article>
 
       <article class="publication">
+        <h3 class="publication-title">
+          <a
+            href="https://doi.org/10.1029/2018MS001580"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            A New Planetary Boundary Layer Scheme Based on LES:
+            Application to the XPIA Campaign
+          </a>
+        </h3>
 
-  <h3 class="publication-title">
-    <a
-      href="https://doi.org/10.1029/2018MS001580"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      A New Planetary Boundary Layer Scheme Based on LES:
-      Application to the XPIA Campaign
-    </a>
-  </h3>
+        <p class="publication-authors">
+          C. B. Senel, O. Temel, <strong>S. Porchetta</strong>,
+          D. Muñoz-Esparza and J. Van Beeck
+        </p>
 
-  <p class="publication-authors">
-    C. B. Senel, O. Temel, <strong>S. Porchetta</strong>,
-    D. Muñoz-Esparza and J. Van Beeck
-  </p>
+        <p class="publication-journal">
+          <em>Journal of Advances in Modeling Earth Systems</em>,
+          <strong>11</strong>(8), 2655–2679, 2019
+        </p>
+      </article>
 
-  <p class="publication-journal">
-    <em>Journal of Advances in Modeling Earth Systems</em>,
-    <strong>11</strong>(8), 2655–2679, 2019
-  </p>
+      <h2 class="publication-year">2018</h2>
 
-</article>
+      <article class="publication">
+        <h3 class="publication-title">
+          <a
+            href="https://doi.org/10.1016/j.apm.2017.09.018"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RANS Closures for Non-neutral Microscale CFD Simulations Sustained
+            with Inflow Conditions Acquired from Mesoscale Simulations
+          </a>
+        </h3>
 
-<h2 class="publication-year">2018</h2>
+        <p class="publication-authors">
+          O. Temel, <strong>S. Porchetta</strong>,
+          L. Bricteux and J. Van Beeck
+        </p>
 
-<article class="publication">
-
-  <h3 class="publication-title">
-    <a
-      href="https://doi.org/10.1016/j.apm.2017.09.018"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      RANS Closures for Non-neutral Microscale CFD Simulations Sustained with Inflow Conditions Acquired from Mesoscale Simulations
-    </a>
-  </h3>
-
-  <p class="publication-authors">
-    O. Temel, <strong>S. Porchetta</strong>,
-    L. Bricteux and J. Van Beeck
-  </p>
-
-  <p class="publication-journal">
-    <em>Applied Mathematical Modelling</em>,
-    <strong>53</strong>, 635–652, 2018
-  </p>
-
-</article>
+        <p class="publication-journal">
+          <em>Applied Mathematical Modelling</em>,
+          <strong>53</strong>, 635–652, 2018
+        </p>
+      </article>
 
     </section>
 
